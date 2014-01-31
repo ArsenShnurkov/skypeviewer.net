@@ -1,0 +1,68 @@
+
+<html>
+	<head>
+		<title></title>
+	</head>
+	<body>
+/etc/mono/2.0/machine.config
+<br />
+/etc/mono/4.0/machine.config
+<br />
+/etc/mono/4.5/machine.config
+<br />
+/opt/mono/etc/mono/2.0/machine.config
+<br />
+/opt/mono/etc/mono/4.0/machine.config
+<br />
+/opt/mono/etc/mono/4.5/machine.config
+
+<br />
+<br />
+в составе файла
+<br />
+/etc/mono/2.0/machine.config
+<br />
+содержатся следующие фрагменты:
+<pre>
+  &lt;configuration&gt;
+	&lt;system.data&gt;
+	  &lt;DbProviderFactories&gt;
+	    &lt;add name="Mono Sqlite Data Provider"  invariant="Mono.Data.SqliteClient" 
+		 description="Mono Framework Data Provider for SQLite (old version)" 
+		 type="Mono.Data.SqliteClient.SqliteFactory, Mono.Data.SqliteClient, Version=2.0.0.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756"/&gt;
+	    &lt;add name="Mono Sqlite Provider"  invariant="Mono.Data.Sqlite" 
+		 description="Mono Framework Data Provider for SQLite (new version)"
+		 type="Mono.Data.Sqlite.SqliteFactory, Mono.Data.Sqlite, Version=2.0.0.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756"/&gt;
+	  &lt;/DbProviderFactories&gt;
+	&lt;/system.data&gt;
+  &lt;/configuration&gt;
+</pre>
+
+<br />
+<br />
+в составе файлов
+<br />
+/etc/mono/4.0/machine.config
+<br />
+/etc/mono/4.5/machine.config
+<br />
+содержатся следующие фрагменты:
+<pre>
+  &lt;configuration&gt;
+	&lt;system.data&gt;
+	  &lt;DbProviderFactories&gt;
+  		&lt;add name="Mono Sqlite Data Provider"  invariant="Mono.Data.SqliteClient" 
+		 description="Mono Framework Data Provider for SQLite (old version)" 
+		 type="Mono.Data.SqliteClient.SqliteFactory, Mono.Data.SqliteClient, Version=4.0.0.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756"/&gt;
+	    &lt;add name="Mono Sqlite Provider"  invariant="Mono.Data.Sqlite" 
+		 description="Mono Framework Data Provider for SQLite (new version)"
+		 type="Mono.Data.Sqlite.SqliteFactory, Mono.Data.Sqlite, Version=4.0.0.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756"/&gt;
+      &lt;/DbProviderFactories&gt;
+	&lt;/system.data&gt;
+  &lt;/configuration&gt;
+</pre>
+
+git submodule add  https://github.com/ArsenShnurkov/System.Data.SQLite.git system-data-sqlite
+
+	</body>
+</html>
